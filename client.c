@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 12:16:48 by tchtaibi          #+#    #+#             */
-/*   Updated: 2021/12/15 13:12:28 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2021/12/15 16:08:09 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void ft_send(int pid, char *str)
         usleep(100);
         i++;
     }
-    
 }
 
 char *ft_to_binary(char *str, int i, int j, int len)
