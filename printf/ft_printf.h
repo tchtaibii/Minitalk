@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 04:19:07 by tchtaibi          #+#    #+#             */
-/*   Updated: 2021/11/23 09:13:17 by tchtaibi         ###   ########.fr       */
+/*   Created: 2021/12/16 12:29:23 by tchtaibi          #+#    #+#             */
+/*   Updated: 2021/12/16 12:29:26 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef    FT_PRINTF_H
+#ifndef FT_PRINTF_H
 # define    FT_PRINTF_H
 
 # include <stdarg.h>
