@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 12:17:42 by tchtaibi          #+#    #+#             */
-/*   Updated: 2021/12/16 12:22:49 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2021/12/16 22:24:34 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_checker(int n)
 	}
 }
 
-int	main((void))
+int	main()
 {
 	ft_printf("PID = %u\n", getpid());
 	signal(SIGUSR1, ft_checker);
