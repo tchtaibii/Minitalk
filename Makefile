@@ -1,23 +1,25 @@
 FLAGS = -Wall -Wextra -Werror
 SRC_CLIENT = client.c ft_strlen.c ft_atoi.c
-SRC_SERVEUR = serveur.c ft_strlen.c ft_atoi.c
-CC = gcc
-PRINT = printf/libftprintf.a
+SRC_SERVER = server.c ft_strlen.c ft_putnbr.c
+CC = cc
 
-all : prt
-	@$(CC) $(FLAGS) $(SRC_CLIENT) $(PRINT) -o client
-	@$(CC) $(FLAGS) $(SRC_SERVEUR) $(PRINT) -o serveur
-	@tput setaf 2; echo "MINITALK is ready"
+all : client server 
 
-prt :
-	@cd printf && make && cd ..
+client : $(SRC_CLIENT)
+	@$(CC) $(FLAGS) $(SRC_CLIENT) -o client
+	@tput setaf 2; echo "CLIENT IS READY"
+
+server  : $(SRC_SERVER)
+	@$(CC) $(FLAGS) $(SRC_SERVER) -o server
+	@tput setaf 2; echo "SERVER IS READY"
 
 clean :
-	@rm -f client serveur
-	@cd printf && make clean && cd ..
+	@rm -f client server
 	@tput setaf 1; echo "CLEAN COMPLET"
 
 fclean : clean
-	@cd printf && make fclean && cd ..
 
 re: fclean all
+
+norm :
+	@tput setaf 2;norminette minitalk.h client.c server.c ft_strlen.c ft_atoi.c ft_putnbr.c

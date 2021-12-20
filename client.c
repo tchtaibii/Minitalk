@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 12:16:48 by tchtaibi          #+#    #+#             */
-/*   Updated: 2021/12/16 22:29:31 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:56:01 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ int	main(int ac, char **av)
 {
 	int		pid;
 	char	*str;
-	char	*nl = "\n";
 
 	if (ac == 3)
 	{
@@ -69,15 +68,10 @@ int	main(int ac, char **av)
 		str = ft_to_binary(av[2], 0, 0, 0);
 		ft_send(pid, str);
 		free(str);
-		/* NEW LINE
-		nl = ft_to_binary(nl, 0, 0, 0);
-		ft_send(pid, nl);
-		free(nl);
-		*/
 	}
 	else
 	{
-		ft_printf("*****You should type 3 arguments, no more, no less*****");
+		write(1, "*****You should type 3 arguments, no more, no less*****", 55);
 		return (0);
 	}
 }

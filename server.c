@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   serveur.c                                          :+:      :+:    :+:   */
+/*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 12:17:42 by tchtaibi          #+#    #+#             */
-/*   Updated: 2021/12/16 22:24:34 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2021/12/20 19:05:18 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,15 @@ void	ft_checker(int n)
 	i++;
 	if (i == 8)
 	{
-		c[8] = '\0';
+		c[i] = '\0';
 		ft_converter(c);
 		i = 0;
 	}
 }
 
-int	main()
+int	main(void)
 {
-	ft_printf("PID = %u\n", getpid());
+	ft_putnbr(getpid());
 	signal(SIGUSR1, ft_checker);
 	signal(SIGUSR2, ft_checker);
 	while (1)
