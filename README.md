@@ -19,14 +19,4 @@ Running `make` will create two binary, `server` and `client`.
 ./client <server pid> <string to send>
 ```
 
-## Tests
-- First test (tests the execution time)
-	```
-	sh tests.sh <server pid>
-	```
-- Second test (tests the behavior in time with an infinite loop)
-	```
-	sh test_loop.sh <server_pid>
-	```
-
 Subject dated January 2022.
